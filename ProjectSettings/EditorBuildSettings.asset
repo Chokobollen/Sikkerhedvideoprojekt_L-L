@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Vr testning.unity
     guid: 6a62219b273879b4eb943d5ce3c478fd
+  - enabled: 1
+    path: Assets/Scenes/Level 1 Briller.unity
+    guid: 9733d02fb6349494ca86232993a85fc1
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: d8b27d275c23e86499bbcb9af81738a2, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 4aac86ca9a265d045b943a1060bf3f33, type: 2}
