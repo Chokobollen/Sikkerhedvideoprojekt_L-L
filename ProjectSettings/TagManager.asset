@@ -8,6 +8,8 @@ TagManager:
   - Hoved
   - Brille
   - Flask
+  - Hand
+  - LabCoat
   layers:
   - Default
   - TransparentFX
