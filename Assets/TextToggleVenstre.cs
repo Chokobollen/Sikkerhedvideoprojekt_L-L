@@ -17,11 +17,11 @@ public class TextToggleVenstre : MonoBehaviour
     {
         if (BrilleTaget == true)
         {
-            Textboks.GetComponent<Renderer>().enabled = false;
+            Textboks.SetActive(false);
         }
         else if (BrilleTaget == false)
         {
-            Textboks.GetComponent<Renderer>().enabled = true;
+            Textboks.SetActive(true);
         }
     }
 
