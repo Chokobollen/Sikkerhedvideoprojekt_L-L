@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TextToggleTrigger: MonoBehaviour
+public class TextToggleVenstre : MonoBehaviour
 {
     private bool BrilleTaget;
     public GameObject Textboks;
@@ -10,7 +10,7 @@ public class TextToggleTrigger: MonoBehaviour
     void Start()
     {
         BrilleTaget = false;
-        gameObject.tag = "Hands";
+        gameObject.tag = "Venstre";
     }
 
     void Update()
@@ -36,10 +36,8 @@ public class TextToggleTrigger: MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Brille")
-        { 
-        BrilleTaget = false;
+        {
+            BrilleTaget = false;
         }
     }
 }
-
-
