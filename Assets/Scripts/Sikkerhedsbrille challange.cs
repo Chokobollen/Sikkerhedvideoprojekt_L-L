@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class TextToggleTrigger : MonoBehaviour
+public class SikkerhedsbrilleChallange : MonoBehaviour
 {
 
     void Start()
