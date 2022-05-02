@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class HeadCollider : MonoBehaviour
 {
     public int sceneIndex;
+    public GameObject Brille;
+    public GameObject Tekst;
    
     void Start()
     {     
@@ -18,8 +20,15 @@ public class HeadCollider : MonoBehaviour
         //Check to see if the tag on the collider is equal to Enemy
         if (other.tag == "Brille")
         {
-            SceneManager.LoadScene(sceneIndex);
+            StartCoroutine(timer());
         }
+    }
+    
+    IEnumerator timer()
+    {
+        Brille.SetActive(false);
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(sceneIndex);
     }
 
 }
