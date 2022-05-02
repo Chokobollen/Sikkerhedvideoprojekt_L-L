@@ -4,14 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Briler
   - Hoved
   - Brille
   - Flask
-  - Hand
   - LabCoat
   - Hands
   - Venstre
+  - Hand
   layers:
   - Default
   - TransparentFX

@@ -5,19 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class LabCoatCollider : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        //Set the tag of this GameObject to Player
-        gameObject.tag = "LabCoat";
-    }
+    //Laver 3 gameobjects
+    public GameObject Textboks;
+    public GameObject LabCoat1;
+    public GameObject LabCoat2;
 
+    //Her bliver der checket om der er et objekt der collider med dette objekt
     private void OnTriggerEnter(Collider other)
     {
-        //Check to see if the tag on the collider is equal to Enemy
-        if (other.tag == "Hand")
+        /*Her checker den saa om det andet objekt har tagget 'Hands'
+        Hvis det er ja saa starter den coroutinen 'timer'*/
+        if (other.tag == "Hands")
         {
-            SceneManager.LoadScene(0);
-        }
+           StartCoroutine(timer());
+        }   
     }
+
+    /*Her bliver coroutinen kaldt og saetter labcoatens 2 dele til ikke at vaere aktive
+    Derefter blvier der aktiveret en tekstboks og sae venter denne del 5 sekunder og loader naeste del.*/
+    IEnumerator timer()
+    {
+        LabCoat1.SetActive(false);
+        LabCoat2.SetActive(false);
+        Textboks.SetActive(true);
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene(0);
+    }
+
 }
