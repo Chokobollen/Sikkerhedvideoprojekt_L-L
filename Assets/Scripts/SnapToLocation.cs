@@ -55,4 +55,5 @@ public class SnapToLocation : MonoBehaviour
         //Kører funktionen SnapObject()
         SnapObject();
     }
+    //Inspiration til koden https://www.youtube.com/watch?v=NWgRud-OY2s
 }

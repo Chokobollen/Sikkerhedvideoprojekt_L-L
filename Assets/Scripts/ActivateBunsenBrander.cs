@@ -27,6 +27,7 @@ public class ActivateBunsenBrander : MonoBehaviour
     {    
         //Giver værdien objectCollider vejen collideren i objektet
         ObjectCollider = GetComponent<Collider>();
+        //inspiration til at hente informationer fra andre scripts https://www.youtube.com/watch?v=Y7pp2gzCzUI
         //Laver genvej til scriptet SnapToLocation så der kan tilgås værdier
         snapToLocation = SnapToplaceObject.GetComponent<SnapToLocation>();
         //Laver genvej til scriptet ActivateGas så der kan tilgås værdier
