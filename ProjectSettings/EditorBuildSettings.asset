@@ -11,12 +11,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Vr testning.unity
     guid: 6a62219b273879b4eb943d5ce3c478fd
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Level 1 Briller.unity
     guid: 9733d02fb6349494ca86232993a85fc1
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Level 2 Lab Coat.unity
     guid: 223b5a8f93dec42418c7029a02c71081
+  - enabled: 1
+    path: Assets/Scenes/Level 3 Bundsenbrander.unity
+    guid: 59a63c046b896d544b1c4b2a0ad25de3
   - enabled: 1
     path: Assets/Scenes/Level 4 Brandslukker.unity
     guid: 93c6c0d9b2b992c4a93415b1907966d5

@@ -1,3 +1,5 @@
+//https://www.youtube.com/watch?v=DEtZUeVY9qk
+
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
@@ -5,23 +7,23 @@ using UnityEngine;
 
 public class Brandslukker : MonoBehaviour
 {
-    [SerializeField] private GameObject prefab;    // hastigheden den får på    
+    [SerializeField] private GameObject prefab;     //Giver mulighed for at aendre paa variablerne i inspectoren   
     [SerializeField] private float speed;
     [SerializeField] private float scale = 1;
-    [SerializeField] private float mass;    // Start is called before the first frame update    
+    [SerializeField] private float mass;      
     void Start()
     {
-        prefab = Resources.Load("projectile") as GameObject;
-    }    // Update is called once per frame    
+        prefab = Resources.Load("projectile") as GameObject; //Henter projektil prefaben ind i scriptet
+    }     
     void Update()
     {
-        if (OVRInput.GetDown(OVRInput.RawButton.B));
-        {            // nyt projektil            
-            GameObject projectile = Instantiate(prefab) as GameObject;            // sted og retning            
-            projectile.transform.position = transform.position + transform.forward * 2;            //størrelse
-            projectile.transform.localScale = transform.localScale * scale;            // en variabl der indeholder Rigidbody
-            Rigidbody rb = projectile.GetComponent<Rigidbody>();            // giver en hastighed
-            rb.velocity = transform.forward * speed;
+        if (OVRInput.GetDown(OVRInput.RawButton.B)); //Checker for controller imput
+        {                        
+            GameObject projectile = Instantiate(prefab) as GameObject; //Saetter projectile prefabet som gameobjekt
+            projectile.transform.position = transform.position + transform.forward * 2; //Tager sted og beregner retning
+            projectile.transform.localScale = transform.localScale * scale; //Skifter stoerelse paa skummmet
+            Rigidbody rb = projectile.GetComponent<Rigidbody>(); //Tilfoejer rigidbody
+            rb.velocity = transform.forward * speed;  //Regner hastigheden ud paa projektilen
         }
     }
 }
