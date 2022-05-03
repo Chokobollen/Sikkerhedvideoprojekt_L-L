@@ -10,14 +10,16 @@ public class ActivateFire : MonoBehaviour
 
         private void OnTriggerEnter(Collider other)
      {
-        //Check to see if the tag on the collider is equal to Enemy
+        //Ser om tagget for objektet i collideren er "Ild"
         if (other.tag == "Ild")
         {
+            //Gør man kan se partiklerne fra ild
             IldParticle.SetActive(true);
+            //Starter timer scriptet
             StartCoroutine(timer());
         }
      }
-     
+     //Her bliver coroutinen kaldt og starter en timer på 5 sekunder for at man ikke kommer i en ny scene med det samme.
      IEnumerator timer()
         {
             yield return new WaitForSeconds(5);

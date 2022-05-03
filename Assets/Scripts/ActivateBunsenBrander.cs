@@ -2,21 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ActivateBunsenBrander : MonoBehaviour
 {
-
+    //Opretter Booleaner til branderOn og GasOn
     public bool BranderOn;
     public bool GasOn;
+    //Laver GameObjekter som vi kan tilføje vores tekstbokse i
     public GameObject Textboks;
     public GameObject Textboks2;
     public GameObject Textboks3;
     Collider ObjectCollider;
+    //Tilknytter en værdi til scriptet for SnapToLocation
     SnapToLocation snapToLocation;
+    //SerializeField gør vi kan se GameObjectet i vores inspector, men kan ikke påvirke den fra andre scripts
     [SerializeField] GameObject SnapToplaceObject;
+    //Tilknytter en værdi til scriptet for ActivateGas
     ActivateGas activateGas;
+    //SerializeField gør vi kan se GameObjectet i vores inspector, men kan ikke påvirke den fra andre scripts
     [SerializeField] GameObject ActivateGasObject;
     
-    // Start is called before the first frame update
+    //Void Awake er det første som bliver loaded i scriptet
     void Awake()
     {    
         //Giver værdien objectCollider vejen collideren i objektet
@@ -64,6 +70,7 @@ public class ActivateBunsenBrander : MonoBehaviour
         {
             Textboks2.SetActive(false); 
             Textboks3.SetActive(true); 
+
         }
     }
 }
