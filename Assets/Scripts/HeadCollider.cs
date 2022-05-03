@@ -5,19 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class HeadCollider : MonoBehaviour
 {
-    public int sceneIndex;
+    public int sceneIndex; //Saetter en integer til sceneIndex saa vi kan gaa videre til naeste scene 
     public GameObject Brille;
     public GameObject Tekst;
-   
-    void Start()
-    {     
-        //Set the tag of this GameObject to Player
-        gameObject.tag = "Player";
-    }
 
     private void OnTriggerEnter(Collider other)
     {
-        //Check to see if the tag on the collider is equal to Enemy
         if (other.tag == "Brille")
         {
             StartCoroutine(timer());
