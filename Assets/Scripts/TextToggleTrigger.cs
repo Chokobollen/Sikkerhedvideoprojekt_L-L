@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TextToggleTrigger: MonoBehaviour
 {
+    //Opretter bool til at toggle om brillerne er taget af spilleren eller ej
     private bool BrilleTaget;
     public GameObject Textboks;
     public GameObject Textboks2;
@@ -14,28 +15,17 @@ public class TextToggleTrigger: MonoBehaviour
         gameObject.tag = "Brille";
     }
 
-    void Update()
-    {
-        if (BrilleTaget == true)
-        {
-            Textboks.SetActive(false);
-            Textboks2.SetActive(true);
-        }
-        else if (BrilleTaget == false)
-        {
-            Textboks.SetActive(true);
-            Textboks2.SetActive(false);
-        }
-    }
-
+ //Tjekker om tagget "Hands" er inde i brillernes collider. Hvis de er sættes briller taget til true
     private void OnTriggerEnter(Collider other)
     {
-        //Check to see if the tag on the collider is equal to Enemy
+        //Tjekker om tagget der kommer ind i collideren er "Hands"
         if (other.tag == "Hands")
         {
             BrilleTaget = true;
         }
     }
+
+    //Tjekker om "hands" forlader collideren. Hvis den gør vil den ændre BrilleTaget til false
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Hands")
@@ -43,6 +33,25 @@ public class TextToggleTrigger: MonoBehaviour
         BrilleTaget = false;
         }
     }
+
+    // Void update, opdatere for hvert frame
+    void Update()
+    {
+        //Er brillerne taget vil den ændre teksten til det vi ønsker
+        if (BrilleTaget == true)
+        {
+            Textboks.SetActive(false);
+            Textboks2.SetActive(true);
+        }
+        //Samt hvis de ikke er taget vil den gå tilbage til den normale tekst
+        else if (BrilleTaget == false)
+        {
+            Textboks.SetActive(true);
+            Textboks2.SetActive(false);
+        }
+    }
+
+   
 }
 
 
