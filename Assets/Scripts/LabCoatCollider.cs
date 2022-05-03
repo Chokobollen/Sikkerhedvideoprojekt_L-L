@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 public class LabCoatCollider : MonoBehaviour
 {
     //Laver 3 gameobjects
-    public GameObject Textboks;
+    public GameObject Textboks1;
+    public GameObject Textboks2;
     public GameObject LabCoat1;
     public GameObject LabCoat2;
+    public int sceneIndex;
 
     //Her bliver der checket om der er et objekt der collider med dette objekt
     private void OnTriggerEnter(Collider other)
@@ -27,9 +29,10 @@ public class LabCoatCollider : MonoBehaviour
     {
         LabCoat1.SetActive(false);
         LabCoat2.SetActive(false);
-        Textboks.SetActive(true);
+        Textboks2.SetActive(false);
+        Textboks1.SetActive(true);
         yield return new WaitForSeconds(5);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(sceneIndex);
     }
 
 }
