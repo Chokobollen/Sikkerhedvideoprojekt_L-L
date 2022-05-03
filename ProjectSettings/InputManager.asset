@@ -729,7 +729,7 @@ InputManager:
     m_Name: XRI_Right_SecondaryButton
     descriptiveName: Device secondary button
     descriptiveNegativeName: 
-    negativeButton: 
+    negativeButton: joystick button 1
     positiveButton: joystick button 1
     altNegativeButton: 
     altPositiveButton: 
