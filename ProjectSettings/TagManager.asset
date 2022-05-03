@@ -12,6 +12,8 @@ TagManager:
   - LabCoat
   - Hands
   - Venstre
+  - Ild
+  - Gas
   layers:
   - Default
   - TransparentFX

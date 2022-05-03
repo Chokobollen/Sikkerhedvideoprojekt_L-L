@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class SnapToLocation : MonoBehaviour
 {
+    //Opretter bool for at registrer om objektet er taget
     private bool grabbed;
-    
-    private bool insideSnapZone;
-
+    //Opretter bool for at registrer om objektet er i snapzonen
+    public bool insideSnapZone;
+    //Opretter bool for at registrer om objekktet er snappet på plads
     public bool Snapped;
 
-    public GameObject RocketPart;
+    //Opretter GameObject plads så koden ved har et GameObject at bruge
+    public GameObject BundsenBrander;
 
     public GameObject SnapRotationReference;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == RocketPart.name)
+        if (other.gameObject.name == BundsenBrander.name)
         {
             insideSnapZone = true;
         }
@@ -24,7 +26,7 @@ public class SnapToLocation : MonoBehaviour
 
      private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.name == RocketPart.name)
+        if (other.gameObject.name == BundsenBrander.name)
         {
             insideSnapZone = false;
         }
@@ -34,15 +36,15 @@ public class SnapToLocation : MonoBehaviour
     {
         if (grabbed == false && insideSnapZone == true)
         {
-            RocketPart.gameObject.transform.position = transform.position;
-            RocketPart.gameObject.transform.rotation = SnapRotationReference.transform.rotation;
+            BundsenBrander.gameObject.transform.position = transform.position;
+            BundsenBrander.gameObject.transform.rotation = SnapRotationReference.transform.rotation;
             Snapped = true;
         }
     }
 
     void Update()
-    {
-        grabbed = RocketPart.GetComponent<OVRGrabbable>().isGrabbed;
+    { 
+        grabbed = BundsenBrander.GetComponent<OVRGrabbable>().isGrabbed;
         SnapObject();
     }
 }
