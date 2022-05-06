@@ -9910,10 +9910,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df91684989a1054292285613b9a9ce8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SnapLocation: {fileID: 40843605}
-  rocket: {fileID: 4645828010820862769}
-  Textboks: {fileID: 0}
-  isSnapped: 0
 --- !u!65 &1565360378
 BoxCollider:
   m_ObjectHideFlags: 0
